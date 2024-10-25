@@ -15,10 +15,10 @@ import{
   PURGE,
   REGISTER
 } from "redux-persist";
-import { Storage } from "redux-persist/lib/storage";
+import  storage  from "redux-persist/lib/storage";
 import { PersistGate } from 'redux-persist/integration/react';
-import persistReducer from 'redux-persist/es/persistReducer';
-import { getDefaultNormalizer } from '@testing-library/react';
+/*import {persistReducer} from 'redux-persist/es/persistReducer';
+import { getDefaultNormalizer } from '@testing-library/react';*/
 
 const persistConfig = { key: "root", storage, version: 1};
 const persistedReducer = persistReducer(persistConfig, authReducer);
