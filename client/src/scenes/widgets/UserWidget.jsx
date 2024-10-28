@@ -22,7 +22,6 @@ const UserWidget = ({ userId, picturePath }) => {
 	const { palette } = useTheme()
 	const navigate = useNavigate()
 	const token = useSelector((state) => state.token)
-	console.log(token)
 	const dark = palette.neutral.dark
 	const medium = palette.neutral.medium
 	const main = palette.neutral.main
@@ -35,7 +34,6 @@ const UserWidget = ({ userId, picturePath }) => {
 			});
 
 		const data = await response.json();
-		console.log(data)
 
 		setUser(data)
 	}
@@ -55,7 +53,7 @@ const UserWidget = ({ userId, picturePath }) => {
 		occupation,
 		viewedProfile,
 		impressions,
-		friends = [],
+		friends,
 	} = user;
 
 	return (
